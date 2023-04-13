@@ -230,11 +230,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\github\\FluentAssertions\\FluentAssertionApplication\\FluentAssertionApplication\\FluentAssertionApplication.csproj",
+      "projectUniqueName": "D:\\github\\FluentAssertions\\src\\FluentAssertionApplication\\FluentAssertionApplication.csproj",
       "projectName": "FluentAssertionApplication",
-      "projectPath": "D:\\github\\FluentAssertions\\FluentAssertionApplication\\FluentAssertionApplication\\FluentAssertionApplication.csproj",
+      "projectPath": "D:\\github\\FluentAssertions\\src\\FluentAssertionApplication\\FluentAssertionApplication.csproj",
       "packagesPath": "C:\\Users\\f_nosrati\\.nuget\\packages\\",
-      "outputPath": "D:\\github\\FluentAssertions\\FluentAssertionApplication\\FluentAssertionApplication\\obj\\",
+      "outputPath": "D:\\github\\FluentAssertions\\src\\FluentAssertionApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
