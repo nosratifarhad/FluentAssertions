@@ -1,18 +1,31 @@
 ﻿using FluentAssertionApplication.Domain.Enum;
+using System.Net.Http;
 
 namespace FluentAssertionApplication.Service.Contracts
 {
     public interface IProductService
     {
-        void NullableTypesAssertion();
+        int NumericTypeIntAssertion();
 
-        short NullableTypeShortAssertion();
+        int? NumericTypeIntNulableAssertion();
 
-        int NullableTypeIntAssertion();
+        float NumericTypeFloatAssertion();
+
+        DateTime? NullableTypesAssertion();
+
+        short? NullableTypeShortAssertion();
+
+        int? NullableTypeIntAssertion();
 
         bool BooleansAssertion();
 
-        string StringsAssertion();
+        string StringEmptyAssertion();
+        
+        string? StringNullAssertion();
+
+        string StringMailAssertion();
+
+        string StringDynamicAssertion();
 
         DateTime DateTimeAssertion();
 
@@ -22,7 +35,7 @@ namespace FluentAssertionApplication.Service.Contracts
 
         ICollection<int> CollectionIntAssertion();
 
-        ICollection<int> CollectionStringAssertion();
+        ICollection<string> CollectionStringAssertion();
 
         int[] ArrayIntAssertion();
 
@@ -44,13 +57,6 @@ namespace FluentAssertionApplication.Service.Contracts
 
         void ExceptionsAssertion();
 
-        void EventMonitoringAssertion();
-
-        void AssemblyReferencesAssertion();
-
-        void HttpResponseMessagesAssertion();
-
-        void ExecutionTimeAssertion();
-
+        HttpResponseMessage HttpResponseMessagesAssertion();
     }
 }

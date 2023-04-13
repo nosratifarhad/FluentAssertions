@@ -1,26 +1,47 @@
 ﻿using FluentAssertionApplication.Domain.Enum;
 using FluentAssertionApplication.Service.Contracts;
+using Microsoft.VisualBasic;
+using System.Net.Http;
+using System.Threading;
 
 namespace FluentAssertionApplication.Service
 {
     public class ProductService : IProductService
     {
+        #region [ Numeric Type ]
+
+        public int NumericTypeIntAssertion()
+        {
+            return 5;
+        }
+
+        public int? NumericTypeIntNulableAssertion()
+        {
+            return 3;
+        }
+
+        public float NumericTypeFloatAssertion()
+        {
+            return 3.1415927F;
+        }
+
+        #endregion [ Numeric Type ]
 
         #region [ Nullable Types ]
 
-        public int NullableTypeIntAssertion()
+        public int? NullableTypeIntAssertion()
         {
-            throw new NotImplementedException();
+            return 3;
         }
 
-        public void NullableTypesAssertion()
+        public DateTime? NullableTypesAssertion()
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public short NullableTypeShortAssertion()
+        public short? NullableTypeShortAssertion()
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         #endregion [ Nullable Types ]
@@ -29,16 +50,36 @@ namespace FluentAssertionApplication.Service
 
         public bool BooleansAssertion()
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         #endregion [ Booleans ]
 
         #region [ Strings ]
 
-        public string StringsAssertion()
+        public string StringEmptyAssertion()
         {
-            throw new NotImplementedException();
+            return "";
+        }
+
+        public string? StringNullAssertion()
+        {
+            return null;
+        }
+
+        public string StringMailAssertion()
+        {
+            return "nosratifarhad01@gmail.com";
+        }
+
+        public string StringDynamicAssertion()
+        {
+            DateTime dateTime = DateTime.Now;
+            var second = dateTime.Second;
+            if (second > 30)
+                return string.Empty;
+
+            return "this is dynamic method";
         }
 
         #endregion [ Strings ]
@@ -47,17 +88,17 @@ namespace FluentAssertionApplication.Service
 
         public TimeOnly TimeOnlyAssertion()
         {
-            throw new NotImplementedException();
+            return new TimeOnly();
         }
 
         public DateOnly DateOnlyAssertion()
         {
-            throw new NotImplementedException();
+            return new DateOnly();
         }
 
         public DateTime DateTimeAssertion()
         {
-            throw new NotImplementedException();
+            return DateTime.Now;
         }
 
         #endregion [ DateTime ]
@@ -66,39 +107,43 @@ namespace FluentAssertionApplication.Service
 
         public int[] ArrayIntAssertion()
         {
-            throw new NotImplementedException();
+            return new int[3] { 1, 2, 4 };
         }
 
         public int[]? ArrayNulableAssertion()
         {
-            throw new NotImplementedException();
+            DateTime dateTime = DateTime.Now;
+            var second = dateTime.Second;
+            if (second > 30)
+                return null;
+
+            return new int[3] { 1, 2, 4 };
         }
 
         public string[] ArrayStringAssertion()
         {
-            throw new NotImplementedException();
+            return new string[3] { "one", "two", "three" };
         }
 
         public ICollection<int> CollectionIntAssertion()
         {
-            throw new NotImplementedException();
+            return (ICollection<int>)new int[3] { 1, 2, 4 };
         }
 
-        public ICollection<int> CollectionStringAssertion()
+        public ICollection<string> CollectionStringAssertion()
         {
-            throw new NotImplementedException();
+            return (ICollection<string>)new string[3] { "one", "two", "three" };
         }
 
         public List<int> ListIntAssertion()
         {
-            throw new NotImplementedException();
+            return new List<int> { 1, 2, 4 };
         }
 
         public List<string> ListStringAssertion()
         {
-            throw new NotImplementedException();
+            return new List<string> { "one", "two", "three" };
         }
-
 
         #endregion [ Collection ]
 
@@ -106,7 +151,12 @@ namespace FluentAssertionApplication.Service
 
         public Dictionary<int, string> DictionariesAssertion()
         {
-            throw new NotImplementedException();
+            return new Dictionary<int, string>()
+            {
+                { 1, "One" },
+                { 2, "Two" },
+                { 3, "Three" }
+            };
         }
 
         #endregion [ Dictionarys ]
@@ -115,12 +165,17 @@ namespace FluentAssertionApplication.Service
 
         public Guid? GuidNulableAssertion()
         {
-            throw new NotImplementedException();
+            DateTime dateTime = DateTime.Now;
+            var second = dateTime.Second;
+            if (second > 30)
+                return null;
+
+            return Guid.NewGuid();
         }
 
         public Guid GuidsAssertion()
         {
-            throw new NotImplementedException();
+            return Guid.NewGuid();
         }
 
         #endregion [ Guid ]
@@ -129,33 +184,23 @@ namespace FluentAssertionApplication.Service
 
         public EnumForTest EnumsAssertion()
         {
-            throw new NotImplementedException();
+            return EnumForTest.None;
         }
 
         #endregion [ Enum ]
 
-        #region [ Event Monitoring ]
-
-        public void EventMonitoringAssertion()
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion [ Event Monitoring ]
-
-        #region [ Assembly References ]
-
-        public void AssemblyReferencesAssertion()
-        {
-            throw new NotImplementedException();
-        }
-        #endregion [ Assembly References ]
-
         #region [ HttpResponseMessages ]
 
-        public void HttpResponseMessagesAssertion()
+        public HttpResponseMessage HttpResponseMessagesAssertion()
         {
-            throw new NotImplementedException();
+            return new HttpResponseMessage()
+            {
+                StatusCode = System.Net.HttpStatusCode.OK,
+                RequestMessage = new HttpRequestMessage()
+                {
+                    
+                },
+            };
         }
 
         #endregion [ HttpResponseMessages ]
@@ -164,12 +209,7 @@ namespace FluentAssertionApplication.Service
 
         public void ExceptionsAssertion()
         {
-            throw new NotImplementedException();
-        }
-
-        public void ExecutionTimeAssertion()
-        {
-            throw new NotImplementedException();
+            throw new ArgumentException("Assertion For Exception.");
         }
 
         #endregion [ Exceptions ]
