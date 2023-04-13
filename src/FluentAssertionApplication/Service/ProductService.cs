@@ -1,8 +1,6 @@
-﻿using FluentAssertionApplication.Domain.Enum;
+﻿using FluentAssertionApplication.Domain.Entity;
+using FluentAssertionApplication.Domain.Enum;
 using FluentAssertionApplication.Service.Contracts;
-using Microsoft.VisualBasic;
-using System.Net.Http;
-using System.Threading;
 
 namespace FluentAssertionApplication.Service
 {
@@ -23,6 +21,11 @@ namespace FluentAssertionApplication.Service
         public float NumericTypeFloatAssertion()
         {
             return 3.1415927F;
+        }
+
+        public int NumericTypeNegativeAssertion()
+        {
+            return -8;
         }
 
         #endregion [ Numeric Type ]
@@ -105,45 +108,31 @@ namespace FluentAssertionApplication.Service
 
         #region [ Collection ]
 
-        public int[] ArrayIntAssertion()
+        public IEnumerable<int> CollectionIntAssertion()
         {
-            return new int[3] { 1, 2, 4 };
-        }
-
-        public int[]? ArrayNulableAssertion()
-        {
-            DateTime dateTime = DateTime.Now;
-            var second = dateTime.Second;
-            if (second > 30)
-                return null;
-
-            return new int[3] { 1, 2, 4 };
-        }
-
-        public string[] ArrayStringAssertion()
-        {
-            return new string[3] { "one", "two", "three" };
-        }
-
-        public ICollection<int> CollectionIntAssertion()
-        {
-            return (ICollection<int>)new int[3] { 1, 2, 4 };
-        }
-
-        public ICollection<string> CollectionStringAssertion()
-        {
-            return (ICollection<string>)new string[3] { "one", "two", "three" };
-        }
-
-        public List<int> ListIntAssertion()
-        {
-            return new List<int> { 1, 2, 4 };
+            return new[] { 1, 2, 5, 8 };
         }
 
         public List<string> ListStringAssertion()
         {
             return new List<string> { "one", "two", "three" };
         }
+
+        public List<Product> ListProductIntAssertion()
+            => new List<Product>()
+            {
+                new()
+                {
+                    ProductId = 1,
+                    ProductName = "ProductName 1"
+                },
+                new()
+                {
+                    ProductId = 2,
+                    ProductName = "ProductName 2"
+                },
+
+            };
 
         #endregion [ Collection ]
 
@@ -162,16 +151,6 @@ namespace FluentAssertionApplication.Service
         #endregion [ Dictionarys ]
 
         #region [ Guid ]
-
-        public Guid? GuidNulableAssertion()
-        {
-            DateTime dateTime = DateTime.Now;
-            var second = dateTime.Second;
-            if (second > 30)
-                return null;
-
-            return Guid.NewGuid();
-        }
 
         public Guid GuidsAssertion()
         {
@@ -198,7 +177,7 @@ namespace FluentAssertionApplication.Service
                 StatusCode = System.Net.HttpStatusCode.OK,
                 RequestMessage = new HttpRequestMessage()
                 {
-                    
+
                 },
             };
         }

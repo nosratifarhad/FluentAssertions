@@ -1,4 +1,5 @@
-﻿using FluentAssertionApplication.Domain.Enum;
+﻿using FluentAssertionApplication.Domain.Entity;
+using FluentAssertionApplication.Domain.Enum;
 
 namespace FluentAssertionApplication.Service.Contracts
 {
@@ -9,6 +10,8 @@ namespace FluentAssertionApplication.Service.Contracts
         int? NumericTypeIntNulableAssertion();
 
         float NumericTypeFloatAssertion();
+
+        int NumericTypeNegativeAssertion();
 
         DateTime? NullableTypesAssertion();
 
@@ -32,25 +35,15 @@ namespace FluentAssertionApplication.Service.Contracts
 
         TimeOnly TimeOnlyAssertion();
 
-        ICollection<int> CollectionIntAssertion();
+        IEnumerable<int> CollectionIntAssertion();
 
-        ICollection<string> CollectionStringAssertion();
-
-        int[] ArrayIntAssertion();
-
-        string[] ArrayStringAssertion();
-
-        int[]? ArrayNulableAssertion();
-
-        List<int> ListIntAssertion();
+        public List<Product> ListProductIntAssertion();
 
         List<string> ListStringAssertion();
 
         Dictionary<int, string> DictionariesAssertion();
 
         Guid GuidsAssertion();
-
-        Guid? GuidNulableAssertion();
 
         EnumForTest EnumsAssertion();
 
