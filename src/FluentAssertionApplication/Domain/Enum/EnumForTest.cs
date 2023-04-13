@@ -3,5 +3,6 @@
     public enum EnumForTest
     {
         None = 0,
+        NoneNone = 1,
     }
 }
