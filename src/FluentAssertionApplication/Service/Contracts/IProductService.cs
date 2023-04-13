@@ -1,5 +1,4 @@
 ﻿using FluentAssertionApplication.Domain.Enum;
-using System.Net.Http;
 
 namespace FluentAssertionApplication.Service.Contracts
 {
