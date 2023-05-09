@@ -5,50 +5,50 @@ namespace FluentAssertionApplication.Service.Contracts
 {
     public interface IProductService
     {
-        int NumericTypeIntAssertion();
+        int NumericTypeIntService();
 
-        int? NumericTypeIntNulableAssertion();
+        int? NumericTypeIntNulableService();
 
-        float NumericTypeFloatAssertion();
+        float NumericTypeFloatService();
 
-        int NumericTypeNegativeAssertion();
+        int NumericTypeNegativeService();
 
-        DateTime? NullableTypesAssertion();
+        DateTime? NullableTypeService();
 
-        short? NullableTypeShortAssertion();
+        short? NullableTypeShortService();
 
-        int? NullableTypeIntAssertion();
+        int? NullableTypeIntService();
 
-        bool BooleansAssertion();
+        bool BooleanService();
 
-        string StringEmptyAssertion();
+        string StringEmptyService();
         
-        string? StringNullAssertion();
+        string? StringNullService();
 
-        string StringMailAssertion();
+        string StringMailService();
 
-        string StringDynamicAssertion();
+        string StringDynamicService();
 
-        DateTime DateTimeAssertion();
+        DateTime DateTimeService();
 
-        DateOnly DateOnlyAssertion();
+        DateOnly DateOnlyService();
 
-        TimeOnly TimeOnlyAssertion();
+        TimeOnly TimeOnlyService();
 
-        IEnumerable<int> CollectionIntAssertion();
+        IEnumerable<int> CollectionIntService();
 
-        public List<Product> ListProductIntAssertion();
+        public List<Product> ListProductIntService();
 
-        List<string> ListStringAssertion();
+        List<string> ListStringService();
 
-        Dictionary<int, string> DictionariesAssertion();
+        Dictionary<int, string> DictionaryService();
 
-        Guid GuidsAssertion();
+        Guid GuidService();
 
-        EnumForTest EnumsAssertion();
+        EnumForTest EnumService();
 
-        void ExceptionsAssertion();
+        void ExceptionService();
 
-        HttpResponseMessage HttpResponseMessagesAssertion();
+        HttpResponseMessage HttpResponseMessageService();
     }
 }

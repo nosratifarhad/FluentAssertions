@@ -14,7 +14,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.EnumsAssertion();
+            var response = productService.EnumService();
 
             response.Should().Be(EnumForTest.None);
             response.Should().NotBe(EnumForTest.NoneNone);

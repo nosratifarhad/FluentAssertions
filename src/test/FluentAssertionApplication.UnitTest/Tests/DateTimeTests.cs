@@ -13,7 +13,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.TimeOnlyAssertion();
+            var response = productService.TimeOnlyService();
 
             response.Should().Be(new TimeOnly());
         }
@@ -23,7 +23,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.DateOnlyAssertion();
+            var response = productService.DateOnlyService();
 
             response.Should().Be(new DateOnly());
         }
@@ -33,7 +33,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.DateTimeAssertion();
+            var response = productService.DateTimeService();
 
             response.Should().BeBefore(DateTime.Now);
             response.Should().BeOnOrBefore(DateTime.Now);

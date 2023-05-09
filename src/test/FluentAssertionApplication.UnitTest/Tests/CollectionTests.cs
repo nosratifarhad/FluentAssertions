@@ -14,7 +14,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.CollectionIntAssertion();
+            var response = productService.CollectionIntService();
 
             response.Should().NotBeEmpty()
                 .And.HaveCount(4)
@@ -50,7 +50,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.ListStringAssertion();
+            var response = productService.ListStringService();
 
             response.Should().NotBeEmpty();
             response.Should().Equal(new string[] { "one", "two", "three" });
@@ -78,7 +78,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
 
             var productService = new ProductService();
 
-            var response = productService.ListProductIntAssertion();
+            var response = productService.ListProductIntService();
 
             response.Should().SatisfyRespectively(
             first =>

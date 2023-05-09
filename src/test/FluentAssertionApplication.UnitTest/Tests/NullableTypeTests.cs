@@ -13,7 +13,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.NullableTypeIntAssertion();
+            var response = productService.NullableTypeIntService();
 
             response.Should().HaveValue();
             response.Should().NotBeNull();
@@ -24,7 +24,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.NullableTypesAssertion();
+            var response = productService.NullableTypeService();
 
             response.Should().NotHaveValue();
             response.Should().BeNull();
@@ -35,7 +35,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.NullableTypeShortAssertion();
+            var response = productService.NullableTypeShortService();
 
             response.Should().NotHaveValue();
             response.Should().BeNull();
