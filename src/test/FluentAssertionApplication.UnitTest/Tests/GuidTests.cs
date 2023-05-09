@@ -14,7 +14,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
 
             var productService = new ProductService();
 
-            var response = productService.GuidsAssertion();
+            var response = productService.GuidService();
 
             response.Should().NotBe(otherGuid);
             response.Should().NotBeEmpty();

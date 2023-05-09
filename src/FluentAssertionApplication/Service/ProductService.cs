@@ -8,22 +8,22 @@ namespace FluentAssertionApplication.Service
     {
         #region [ Numeric Type ]
 
-        public int NumericTypeIntAssertion()
+        public int NumericTypeIntService()
         {
             return 5;
         }
 
-        public int? NumericTypeIntNulableAssertion()
+        public int? NumericTypeIntNulableService()
         {
             return 3;
         }
 
-        public float NumericTypeFloatAssertion()
+        public float NumericTypeFloatService()
         {
             return 3.1415927F;
         }
 
-        public int NumericTypeNegativeAssertion()
+        public int NumericTypeNegativeService()
         {
             return -8;
         }
@@ -32,17 +32,17 @@ namespace FluentAssertionApplication.Service
 
         #region [ Nullable Types ]
 
-        public int? NullableTypeIntAssertion()
+        public int? NullableTypeIntService()
         {
             return 3;
         }
 
-        public DateTime? NullableTypesAssertion()
+        public DateTime? NullableTypeService()
         {
             return null;
         }
 
-        public short? NullableTypeShortAssertion()
+        public short? NullableTypeShortService()
         {
             return null;
         }
@@ -51,7 +51,7 @@ namespace FluentAssertionApplication.Service
 
         #region [ Booleans ]
 
-        public bool BooleansAssertion()
+        public bool BooleanService()
         {
             return true;
         }
@@ -60,22 +60,22 @@ namespace FluentAssertionApplication.Service
 
         #region [ Strings ]
 
-        public string StringEmptyAssertion()
+        public string StringEmptyService()
         {
             return "";
         }
 
-        public string? StringNullAssertion()
+        public string? StringNullService()
         {
             return null;
         }
 
-        public string StringMailAssertion()
+        public string StringMailService()
         {
             return "nosratifarhad01@gmail.com";
         }
 
-        public string StringDynamicAssertion()
+        public string StringDynamicService()
         {
             DateTime dateTime = DateTime.Now;
             var second = dateTime.Second;
@@ -89,17 +89,17 @@ namespace FluentAssertionApplication.Service
 
         #region [ DateTime ]
 
-        public TimeOnly TimeOnlyAssertion()
+        public TimeOnly TimeOnlyService()
         {
             return new TimeOnly();
         }
 
-        public DateOnly DateOnlyAssertion()
+        public DateOnly DateOnlyService()
         {
             return new DateOnly();
         }
 
-        public DateTime DateTimeAssertion()
+        public DateTime DateTimeService()
         {
             return DateTime.Now;
         }
@@ -108,17 +108,17 @@ namespace FluentAssertionApplication.Service
 
         #region [ Collection ]
 
-        public IEnumerable<int> CollectionIntAssertion()
+        public IEnumerable<int> CollectionIntService()
         {
             return new[] { 1, 2, 5, 8 };
         }
 
-        public List<string> ListStringAssertion()
+        public List<string> ListStringService()
         {
             return new List<string> { "one", "two", "three" };
         }
 
-        public List<Product> ListProductIntAssertion()
+        public List<Product> ListProductIntService()
             => new List<Product>()
             {
                 new()
@@ -138,7 +138,7 @@ namespace FluentAssertionApplication.Service
 
         #region [ Dictionarys ]
 
-        public Dictionary<int, string> DictionariesAssertion()
+        public Dictionary<int, string> DictionaryService()
         {
             return new Dictionary<int, string>()
             {
@@ -152,7 +152,7 @@ namespace FluentAssertionApplication.Service
 
         #region [ Guid ]
 
-        public Guid GuidsAssertion()
+        public Guid GuidService()
         {
             return Guid.NewGuid();
         }
@@ -161,7 +161,7 @@ namespace FluentAssertionApplication.Service
 
         #region [ Enum ]
 
-        public EnumForTest EnumsAssertion()
+        public EnumForTest EnumService()
         {
             return EnumForTest.None;
         }
@@ -170,7 +170,7 @@ namespace FluentAssertionApplication.Service
 
         #region [ HttpResponseMessages ]
 
-        public HttpResponseMessage HttpResponseMessagesAssertion()
+        public HttpResponseMessage HttpResponseMessageService()
         {
             return new HttpResponseMessage()
             {
@@ -186,7 +186,7 @@ namespace FluentAssertionApplication.Service
 
         #region [ Exceptions ]
 
-        public void ExceptionsAssertion()
+        public void ExceptionService()
         {
             throw new ArgumentException("Assertion For Exception.");
         }

@@ -12,7 +12,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.DictionariesAssertion();
+            var response = productService.DictionaryService();
 
             response.Should().NotBeNull();
             response.Should().NotBeEmpty();

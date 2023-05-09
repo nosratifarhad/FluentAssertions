@@ -12,7 +12,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.StringEmptyAssertion();
+            var response = productService.StringEmptyService();
 
             response.Should().NotBeNull();
             response.Should().BeEmpty();
@@ -25,7 +25,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.StringNullAssertion();
+            var response = productService.StringNullService();
 
             response.Should().BeNull();
             response.Should().BeNullOrWhiteSpace();
@@ -37,7 +37,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.StringMailAssertion();
+            var response = productService.StringMailService();
 
             response.Should().Be("nosratifarhad01@gmail.com");
             response.Should().Contain("nosratifarhad01@gmail.com");
@@ -50,7 +50,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.StringDynamicAssertion();
+            var response = productService.StringDynamicService();
 
             response.Should().BeOneOf(
                 string.Empty,

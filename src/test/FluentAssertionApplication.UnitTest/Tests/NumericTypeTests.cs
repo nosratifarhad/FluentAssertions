@@ -12,7 +12,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.NumericTypeIntAssertion();
+            var response = productService.NumericTypeIntService();
 
             response.Should().BeGreaterThanOrEqualTo(5);
             response.Should().BeGreaterThanOrEqualTo(3);
@@ -32,7 +32,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.NumericTypeIntNulableAssertion();
+            var response = productService.NumericTypeIntNulableService();
 
             response.Should().Be(3);
         }
@@ -42,7 +42,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.NumericTypeFloatAssertion();
+            var response = productService.NumericTypeFloatService();
 
             response.Should().NotBeApproximately(2.5F, 0.5F);
         }
@@ -52,7 +52,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.NumericTypeNegativeAssertion();
+            var response = productService.NumericTypeNegativeService();
 
             response.Should().BeNegative();
         }

@@ -13,7 +13,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            FluentActions.Invoking(() => productService.ExceptionsAssertion()).Should().Throw<ArgumentException>()
+            FluentActions.Invoking(() => productService.ExceptionService()).Should().Throw<ArgumentException>()
                 .WithMessage("Assertion For Exception.");
         }
 

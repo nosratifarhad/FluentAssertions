@@ -12,7 +12,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.BooleansAssertion();
+            var response = productService.BooleanService();
 
             response.Should().BeTrue();
             response.Should().Be(true);

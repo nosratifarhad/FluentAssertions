@@ -13,7 +13,7 @@ namespace FluentAssertionApplication.UnitTest.Tests
         {
             var productService = new ProductService();
 
-            var response = productService.HttpResponseMessagesAssertion();
+            var response = productService.HttpResponseMessageService();
 
             response.Should().BeSuccessful("it's set to OK");
             response.Should().HaveStatusCode(HttpStatusCode.OK);
